@@ -1,0 +1,15 @@
+# Project OS V1 - Default Dconf System Profile Settings
+# Apply with: sudo dconf update
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+enable-animations=true
+
+[org/gnome/shell]
+favorite-apps=['org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop']
+
+[org/gnome/settings-daemon/plugins/media-keys]
+terminal=['<Control><Alt>t']
+
+[org/gnome/desktop/wm/keybindings]
+close=['<Alt>F4']

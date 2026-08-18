@@ -1,0 +1,5 @@
+# Project OS V1 - Sudoers configuration for osuser
+# Permissions: 0440 required (chmod 0440 /etc/sudoers.d/osuser)
+# Validate syntax: sudo visudo -c
+
+osuser ALL=(ALL) NOPASSWD: ALL

@@ -1,0 +1,32 @@
+name: Code Quality & Kickstart Linter
+
+on:
+  push:
+    branches: [ dev, main ]
+  pull_request:
+    branches: [ dev, main ]
+
+jobs:
+  lint-scripts:
+    name: ShellCheck Scripts Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run ShellCheck on Bash Scripts
+        run: |
+          sudo apt-get update && sudo apt-get install -y shellcheck
+          shellcheck scripts/syscontrol/*.sh
+
+  lint-kickstart:
+    name: Kickstart Syntax Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install pykickstart & Validate Recipe
+        run: |
+          sudo apt-get update && sudo apt-get install -y pykickstart
+          ksvalid configs/kickstart/fedora-os-v1.ks

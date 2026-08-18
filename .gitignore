@@ -1,0 +1,22 @@
+# ISO & Disk Images
+*.iso
+*.qcow2
+*.vdi
+*.vmdk
+*.box
+*.raw
+
+# Build & Livemedia Creator Artifacts
+/build/
+/out/
+*.log
+anaconda/
+anaconda-tb*
+
+# Environment & Temp Files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+*.tmp
+*.scratch
