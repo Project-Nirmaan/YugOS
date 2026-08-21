@@ -32,4 +32,4 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:"$K
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:"$KEY_PATH" command "$COMMAND"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:"$KEY_PATH" binding "$BINDING"
 
-echo "we added a shortcut for $NAME"
+echo "we added a shortcut for $NAME :)"
